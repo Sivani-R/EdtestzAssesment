@@ -1,0 +1,46 @@
+/* src/pages/Booking.css */
+.booking-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 20px;
+}
+
+.booking-overlay {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.booking-calendar {
+    margin-top: 20px;
+}
+
+.calendar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.calendar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.calendar li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 2px;
+    background: #333;
+    border-radius: 5px;
+}

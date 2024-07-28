@@ -1,42 +1,40 @@
 // src/pages/Booking.js
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import './Booking.css';
 
-const Booking = ({ authToken }) => {
-    const [date, setDate] = useState('');
-    const [time, setTime] = useState('');
-    const [message, setMessage] = useState('');
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        try {
-            await axios.post('http://localhost:5000/api/appointments', { date, time }, {
-                headers: { Authorization: authToken }
-            });
-            setMessage('Appointment booked successfully');
-        } catch (error) {
-            setMessage('Error booking appointment');
-        }
-    };
-
-    return (
-        <div>
-            <h2>Book an Appointment</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Date:</label>
-                    <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+const Booking = () => (
+    <div className="booking-container">
+        <div className="booking-overlay">
+            <h2>Hi, I am Gabbug!</h2>
+            <p>Ready for a Quality Software? Let's Dig Deep Into Your Thought!</p>
+            <div className="booking-calendar">
+                {/* Add your calendar component here */}
+                <p>Select a Day</p>
+                <div className="calendar">
+                    {/* Example of a simple calendar layout */}
+                    <ul>
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                        <li>Sun</li>
+                    </ul>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    {/* Continue this structure for the full month */}
                 </div>
-                <div>
-                    <label>Time:</label>
-                    <input type="time" value={time} onChange={(e) => setTime(e.target.value)} />
-                </div>
-                <button type="submit">Book</button>
-            </form>
-            {message && <p>{message}</p>}
+            </div>
         </div>
-    );
-};
+    </div>
+);
 
 export default Booking;

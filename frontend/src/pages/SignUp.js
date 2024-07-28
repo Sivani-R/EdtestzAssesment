@@ -20,7 +20,7 @@ const SignUp = () => {
 
     return (
         <div>
-            <h2>Sign Up</h2>
+            <h2 className='signheading'>Sign Up</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Username:</label>

@@ -21,7 +21,7 @@ const SignIn = ({ setAuthToken }) => {
 
     return (
         <div>
-            <h2>Sign In</h2>
+            <h2 className='signheading'>Sign In</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Username:</label>

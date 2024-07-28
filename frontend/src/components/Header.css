@@ -1,0 +1,32 @@
+/* src/components/Header.css */
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.navoption {
+    width: 100%;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

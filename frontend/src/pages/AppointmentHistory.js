@@ -1,6 +1,7 @@
 // src/pages/AppointmentHistory.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './appointmenthistory.css';
 
 const AppointmentHistory = ({ authToken }) => {
     const [appointments, setAppointments] = useState([]);
@@ -22,7 +23,7 @@ const AppointmentHistory = ({ authToken }) => {
 
     return (
         <div>
-            <h2>Appointment History</h2>
+            <h2 className='historyname'>Appointment History</h2>
             <ul>
                 {appointments.map((appointment) => (
                     <li key={appointment.id}>{appointment.date} at {appointment.time}</li>
